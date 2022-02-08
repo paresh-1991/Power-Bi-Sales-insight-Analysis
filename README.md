@@ -1,6 +1,11 @@
 # Power-Bi-Sales-insight-Analysis
 The dataset used for this analysis is Atliq sales Dataset. Atliq Hardware is a company which provide computer hardware and peripheral to their clients such as excel stores, electronic stores and surge stores.
 
+## Project Tasks:
+- Task 1: Create Data Base and SQL analysis
+- Task 2: Data Cleaning and transforming data using Power Query
+- Task 3: Power BI Dashboard
+
 ## Problem Statement
 
 Sales analysis is mining your data to evaluate the performance of your sales against its goals. It provides insights about the top performing and underperforming products/services, the problems in selling and market opportunities, sales forecasting, and sales activities that generate revenue.
