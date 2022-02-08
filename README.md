@@ -65,5 +65,16 @@ Show total revenue in year 2020 in Chennai
 
 SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.market_code="Mark001";
 
-## DATA Cleaning and ETL
+## DATA Cleaning and ETL with Power BI and Power query
+Connect the Power BI with mySQL database to perform data cleaning and ETL. Power query is used to transform the data.
 
+-Load the data into POWER BI via mySQL.
+-Define the new relationships between tables and/or correct pre-defined relationships between tables. [STAR SCHEMA: Data modelling]
+- Transform data using powerquery
+  -- Filtered the rows to select the observations which is linked to India regional offices.
+  -- Filter Sales Amount values which is less or equal to 0.
+  -- convert some of the sales amount which is given in USD currency to Indian Rupee(INR) by creating new column normalize        currency. Formula to create norm_amount column:=
+  = Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)
+  -- correcting duplicates: in mysql we see that currency column is showing twice INR when trying to see distinct(transaction.currency), the problem lies in format where one is 'INR' simple and other is 'INR\r'.
+## Build Dashboard
+ 
