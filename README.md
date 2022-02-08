@@ -91,3 +91,7 @@ Highlights of the dashboard:
 - Top 5 products which generated the most revenue.
 - Revenue by markets
 - sales quantity by different regional offices.
+
+### Dashboard
+
+![image](https://user-images.githubusercontent.com/60096598/152989985-03e9d743-712c-4cf8-bcf1-9de8b6485288.png)
