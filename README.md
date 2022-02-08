@@ -17,16 +17,16 @@ In today world, the market is growing dynamically and companies such as ATLIQ, f
 ### Purpose
 To unlock sales insight that are not visible before for sales team for decision support & automate them to reduced manual time spent in data gathering.
 ### Stakeholders
--Sales Director
--Marketing Team
--Data & Analytics Team
--Customer Service Team
+- Sales Director
+- Marketing Team
+- Data & Analytics Team
+- Customer Service Team
 ### End Result
 An Automated Dashboard providing quick & latest sale insights in order to support data driven decision making.
 ### Success Criteria
--Dashboard(s) uncovering sales order insights with latest data available
--Sales team able to take better decisions & prove 10% cost savings of total spend
--Sales analysts stop data gethering manually in order to save 20% of their business time and reinvest it value added activity.
+- Dashboard(s) uncovering sales order insights with latest data available
+- Sales team able to take better decisions & prove 10% cost savings of total spend
+- Sales analysts stop data gethering manually in order to save 20% of their business time and reinvest it value added activity.
 
 
 ## Setup
@@ -34,41 +34,42 @@ An Automated Dashboard providing quick & latest sale insights in order to suppor
 Data Analysis Using SQL ==>  DATA Cleaning & ETL ==> Build Dashboard
 
 ## Data Analysis using mySQL
-Show all customer records
 
-SELECT * FROM customers;
+- Show all customer records
 
-Show total number of customers
+  SELECT * FROM customers;
 
-SELECT count(*) FROM customers;
+- Show total number of customers
 
-Show transactions for Chennai market (market code for chennai is Mark001
+  SELECT count(*) FROM customers;
 
-SELECT * FROM transactions where market_code='Mark001';
+- Show transactions for Chennai market (market code for chennai is Mark001
 
-Show distrinct product codes that were sold in chennai
+  SELECT * FROM transactions where market_code='Mark001';
 
-SELECT distinct product_code FROM transactions where market_code='Mark001';
+- Show distrinct product codes that were sold in chennai
 
-Show transactions where currency is US dollars
+  SELECT distinct product_code FROM transactions where market_code='Mark001';
 
-SELECT * from transactions where currency="USD"
+- Show transactions where currency is US dollars
 
-Show transactions in 2020 join by date table
+  SELECT * from transactions where currency="USD"
 
-SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;
+- Show transactions in 2020 join by date table
 
-Show total revenue in year 2020,
+  SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;
 
-SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";
+- Show total revenue in year 2020,
 
-Show total revenue in year 2020, January Month,
+  SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or       transactions.currency="USD\r";
 
-SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");
+- Show total revenue in year 2020, January Month,
 
-Show total revenue in year 2020 in Chennai
+  SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");
 
-SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.market_code="Mark001";
+- Show total revenue in year 2020 in Chennai
+
+  SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.market_code="Mark001";
 
 ## DATA Cleaning and ETL with Power BI and Power query
 Connect the Power BI with mySQL database to perform data cleaning and ETL. Power query is used to transform the data.
