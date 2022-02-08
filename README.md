@@ -78,4 +78,11 @@ Connect the Power BI with mySQL database to perform data cleaning and ETL. Power
   - correcting duplicates: in mysql we see that currency column is showing twice INR when trying to see distinct(transaction.currency), the problem lies in format where one is 'INR' simple and other is 'INR\r'.
 
 ## Build Dashboard
- 
+Highlights of the dashboard:
+- Filter options: by year and by month.
+- Total revenue.
+- Revenue trend by date.
+- Top 5 Customers by whom the most revenue is generated.
+- Top 5 products which generated the most revenue.
+- Revenue by markets
+- sales quantity by different regional offices.
